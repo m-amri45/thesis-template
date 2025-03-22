@@ -1,0 +1,47 @@
+\chapter{Hasil dan Analisis}
+
+\lipsum[1] Example of a table.
+
+\begin{table}[h!]
+	\caption{Table 1}
+	\label{tabref1}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Observation           & Min                             & Max                           \\
+		\hline
+		Cart Position         & -4,8                            & 4,8                           \\
+		\hline
+		Cart Velocity         & $-\infty$                       & $\infty$                      \\
+		\hline
+		Pole Angle            & $\sim -0,418$ rad $(-24^\circ)$ & $\sim 0,418$ rad $(24^\circ)$ \\
+		\hline
+		Pole Angular Velocity & $-\infty$                       & $\infty$                      \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Referencing to table \ref{tabref1}. \lipsum[2] Another example of table configuration.
+
+\begin{table}[H]
+	\centering
+	\caption{Table 2}
+	\label{tabref2}
+	\renewcommand{\arraystretch}{1.2}
+	\setlength{\tabcolsep}{3pt}
+	\begin{tabularx}{\textwidth}{|p{20mm}|X|X|X|X|X|X|X|}
+		\hline
+		\textbf{Reference}            & \multicolumn{2}{c|}{Spanò et al. } 								 & Da Silva et al. 								   & Y. Meng et al. 							& \multicolumn{2}{c|}{Sutisna et al. 							   } & Proposed                            \\ \hline
+		\textbf{Design Level}         & \multicolumn{4}{c|}{Standalone Core}                             & \multicolumn{3}{c|}{System on Chip}                                                                                                                                                                     \\ \hline
+		\textbf{Action Policy}        & \multicolumn{2}{c|}{NA}                                          & random                                          & $\epsilon$-greedy                          & \multicolumn{2}{c|}{decreasing-$\epsilon$}                         & $\epsilon$-greedy                   \\ \hline
+		\textbf{Number of Agents (G)} & single                                                           & single                                          & single                                     & double                                                             & single            & single & single \\ \hline
+		\textbf{Bit Width}            & 16                                                               & 32                                              & 30                                         & 16                                                                 & 16                & 32     & 32     \\ \hline
+		\textbf{LUT}                  & 333                                                              & 682                                             & 77574                                      & 172                                                                & 2490              & 2062   & 759    \\ \hline
+		\textbf{Registers}            & 258                                                              & 606                                             & 13175                                      & NA                                                                 & 2348              & 2179   & 1259   \\ \hline
+		\textbf{BRAM}                 & NA                                                               & NA                                              & 266                                        & NA                                                                 & 22                & 20     & 1      \\ \hline
+	\end{tabularx}
+\end{table}
+
+
+
+
